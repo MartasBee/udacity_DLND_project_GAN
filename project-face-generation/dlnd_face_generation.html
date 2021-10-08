@@ -15980,6 +15980,7 @@ Training finished in 0:14:38.871497
 <p>Seems that there is not enoght diversity in input dataset. Most generated faces are white. Some exception occured, for example the red face with black-hole eyes (some kind of deamon?! :-))</p>
 <p>With exception of mentioned <code>deamon</code> generated faces looks pretty realistic (with few exceptions/occasional isses).</p>
 <p>First implemetation used 3 conv / t_conv layers and 100 epochs generated quite blury results. So I added extra conv / t_conv layers. I also fixed weights init (removed normal init of batch norm layer). Added beta params to optimizers. Also configured real_loss labels smoothing. With such updates, network started to generate realistic looking faces in 25 epochs.</p>
+<p>Proposed improvements: work with larger resolution. That will also accomodate more conv / t_conv layers, so network will be able to learn more features/details (but it will cost more time to train). Next steps for improvements may include conv_dim params and more epochs.</p>
 
 </div>
 </div>
